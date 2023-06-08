@@ -1,6 +1,6 @@
 .sidebar_container {
   display: flex;
-
+  /* background: rgb(159, 159, 238); */
   width: 30%;
   height: 100vh;
   border-right: 1px solid black;
@@ -22,9 +22,9 @@
   width: 100%;
   display: flex;
   padding: 10px 20px;
-  background: rgb(159, 159, 238);
+
   flex-direction: column;
-  /* height: 100%; */
+
 }
 
 .sidebar_user img {

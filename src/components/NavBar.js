@@ -34,26 +34,31 @@ const NavBar = () => {
         console.log(error);
       });
   }
-  let config2 = {
-    method: 'get',
-    maxBodyLength: Infinity,
-    url: `https://api.green-api.com/waInstance${state.instance}/lastOutgoingMessages/${state.token}`,
-    headers: {}
-  };
+  let data2 = JSON.stringify({
+    "chatId": `${param}@c.us`,
+    "count": 10
+  });
 
-  const getPost = () => {
+  let config2 = {
+    method: 'post',
+    maxBodyLength: Infinity,
+    url: `https://api.green-api.com/waInstance${state.instance}/getChatHistory/${state.token}`,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: data2
+  };
+  useEffect(() => {
     axios.request(config2)
       .then((response) => {
         setValue(response.data)
+        console.log((response.data));
       })
       .catch((error) => {
         console.log(error);
       });
-  }
-  useEffect(() => {
-    getPost()
     // eslint-disable-next-line
-  }, [value])
+  }, [text])
   console.log(value)
   return (
     <div className='navbar'>
