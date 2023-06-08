@@ -1,0 +1,50 @@
+.form_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, black, red, black, black, red, black);
+}
+
+.form {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 20px;
+}
+
+.form input {
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+.form button {
+  width: 200px;
+  height: 40px;
+  margin: 10px;
+  background: green;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.form button:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.form h3 {
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}

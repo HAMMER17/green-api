@@ -1,0 +1,23 @@
+.user_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user_text_font {
+  margin: 20px;
+}

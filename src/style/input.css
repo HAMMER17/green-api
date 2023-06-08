@@ -1,0 +1,21 @@
+.input input {
+  width: 80%;
+  height: 40px;
+  /* border: none; */
+  padding: 10px;
+}
+
+.input button {
+  width: 20%;
+  height: 40px;
+  border: none;
+  background: green;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+}
+
+.input button:hover {
+  background: blue;
+  transition: 0.5s;
+}
