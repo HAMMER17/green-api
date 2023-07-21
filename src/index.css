@@ -3,3 +3,70 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.search {
+  text-align: center;
+  padding: 10px;
+  background: rgb(198, 198, 198);
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.search h1 {
+  color: black;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: 'Times New Roman', Times, serif;
+  /* text-align: center; */
+  /* text-shadow: 15px 10px 3px black; */
+}
+
+.search_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 10px;
+}
+
+.search input {
+  width: 80%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+}
+
+.search button {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 1px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.search button:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.search_user {
+  display: flex;
+  align-items: center;
+
+}
+
+.search_user img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
