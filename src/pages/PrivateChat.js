@@ -17,7 +17,7 @@ const PrivateChat = () => {
   // const { data } = useContext(ChatContext)
   let date = new Date();
 
-  let formatter = new Intl.DateTimeFormat("en", {
+  let formatter = new Intl.DateTimeFormat("ru", {
     weekday: "long",
     year: "numeric",
     month: "long",
