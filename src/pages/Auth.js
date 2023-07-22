@@ -34,7 +34,7 @@ const Auth = () => {
               displayName,
               photoURL: downloadURL
             });
-            await setDoc(doc(db, "private", result.user.uid), { messages: [] });
+            // await setDoc(doc(db, "private", result.user.uid), { messages: [] });
             // await setDoc(doc(db, 'chats', result.user.uid), {})
             navigate('/')
           } catch (error) {

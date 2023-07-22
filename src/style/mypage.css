@@ -9,10 +9,12 @@
   color: white;
 }
 
-.my_page img {
+.my_page_img {
   width: 80%;
   margin: 20px;
   border-radius: 10px;
+  /* border: 1px solid white; */
+  padding: 10px;
 }
 
 .my_button {
@@ -48,6 +50,7 @@
   border-radius: 50%;
   cursor: pointer;
   object-fit: cover;
+  margin: 5px;
 }
 
 .my_page h2 {

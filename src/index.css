@@ -13,7 +13,9 @@ a {
   color: white;
 }
 
+
 .search {
+
   text-align: center;
   padding: 10px;
   background: rgb(198, 198, 198);
@@ -23,8 +25,8 @@ a {
 
 .search h1 {
   color: black;
-  /* font-family: 'Courier New', Courier, monospace; */
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Courier New', Courier, monospace;
+  /* font-family: 'Times New Roman', Times, serif; */
   /* text-align: center; */
   /* text-shadow: 15px 10px 3px black; */
 }
@@ -69,4 +71,6 @@ a {
   height: 70px;
   border-radius: 50%;
   margin-right: 10px;
+  object-fit: contain;
+  cursor: pointer;
 }

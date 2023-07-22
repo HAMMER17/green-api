@@ -27,9 +27,9 @@ const ChatPage = () => {
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const arr = [];
       querySnapshot.forEach((doc) => {
-        // if ((currentUser.uid === doc.data().id) || (doc.data().displayName === data.displayName)) {
+
         arr.push(doc.data());
-        // }
+
       });
       setChat(arr)
       setLoader(false)
@@ -48,7 +48,7 @@ const ChatPage = () => {
           animationDuration="0.75"
           width="96"
           visible={true}
-        /></div>) : chat.sort((a, b) => b.id - a.id).map(el => (
+        /></div>) : chat.map(el => (
           <div ref={scrollRef} className={data.id !== el.id ? "chat_right" : "chat_left"} key={Math.random()} >
 
             <div className='chat_img_user'>

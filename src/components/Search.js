@@ -34,7 +34,7 @@ const Search = () => {
 
         <div>
           {/* <input type="text" placeholder='Search...' onKeyDown={handleKey} onChange={(e) => setSortUser(e.target.value)} value={sortUser} /> */}
-          {currentUser ? <button style={{ background: 'red', color: 'white' }} onClick={outUser}>out</button> :
+          {currentUser ? <button style={{ background: 'red', color: 'white' }} onClick={outUser}>Go out</button> :
             <button style={{ background: 'green', color: 'white' }}><Link to={'/auth'}>sign in</Link></button>}
         </div>
         <div className="search_user">

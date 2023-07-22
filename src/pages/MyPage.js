@@ -47,14 +47,12 @@ const MyPage = () => {
     } catch (error) {
       console.log(error)
     }
-
-
   }
   return (
     <div className='my_page'>
       <button className='my_button' onClick={comeBack}>come back</button>
       <h1>I am {currentUser.displayName}</h1>
-      <img src={currentUser.photoURL} alt="currentUser" />
+      <img className='my_page_img' src={currentUser.photoURL} alt="currentUser" />
       <h3>{currentUser.time}</h3>
       <h3>{currentUser.email}</h3>
       <h2 >You could write to them in private chat</h2>

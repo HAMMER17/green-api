@@ -11,10 +11,10 @@
 }
 
 .user_elem {
-  /* padding: 5px; */
-  background: whitesmoke;
+  padding: 5px;
+  background: white;
   border-radius: 10px;
-  margin: 5px;
+  margin-top: 5px;
   transition: 0.5s;
   /* border-bottom: 1px solid black; */
   /* width: 90%; */
