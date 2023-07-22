@@ -4,13 +4,13 @@ import { db } from '../firebase/config'
 import { AuthContext } from '../context/AuthContext'
 import '../style/mypage.css'
 import { useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getUserData } from '../redux/user';
 
 const MyPage = () => {
   const [userData, setUserData] = useState([])
   const { currentUser } = useContext(AuthContext)
-  const state = useSelector(state => state.user.value)
+  // const state = useSelector(state => state.user.value)
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -34,7 +34,7 @@ const MyPage = () => {
   }, [currentUser.uid])
 
   const chatUser = async (data) => {
-    const comdinedId = currentUser.uid > state.id ? currentUser.uid + state.id : state.id + currentUser.uid
+    const comdinedId = await currentUser.uid > data.id ? currentUser.uid + data.id : data.id + currentUser.uid
     try {
       const res = await getDoc(doc(db, "private", comdinedId))
       if (!res.exists()) {
