@@ -9,6 +9,10 @@
   color: white;
 }
 
+.my_page h1 {
+  font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .my_page_img {
   width: 80%;
   margin: 20px;
@@ -58,4 +62,10 @@
   font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-style: italic;
   color: red;
+}
+
+.my_page h3 {
+  font-family: 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  font-size: 10px;
 }

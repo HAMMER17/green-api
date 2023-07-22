@@ -15,16 +15,19 @@ a {
 
 
 .search {
-
+  background: black;
+  color: white;
   text-align: center;
   padding: 10px;
-  background: rgb(198, 198, 198);
+  border: 2px solid white;
+  /* background: rgb(198, 198, 198); */
   margin: 5px;
   border-radius: 10px;
+
 }
 
 .search h1 {
-  color: black;
+  /* color: black; */
   font-family: 'Courier New', Courier, monospace;
   /* font-family: 'Times New Roman', Times, serif; */
   /* text-align: center; */

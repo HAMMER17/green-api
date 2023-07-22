@@ -11,6 +11,7 @@ const MyPage = () => {
   const [userData, setUserData] = useState([])
   const { currentUser } = useContext(AuthContext)
   const state = useSelector(state => state.user.value)
+
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const comeBack = () => {
@@ -53,9 +54,9 @@ const MyPage = () => {
       <button className='my_button' onClick={comeBack}>come back</button>
       <h1>I am {currentUser.displayName}</h1>
       <img className='my_page_img' src={currentUser.photoURL} alt="currentUser" />
-      <h3>{currentUser.time}</h3>
+
       <h3>{currentUser.email}</h3>
-      <h2 >You could write to them in private chat</h2>
+      <h2 >You could write to them in private chat...</h2>
       <div className="my_page_img">
         {userData.map(elem => (
           <img key={Math.random()} onClick={() => chatUser(elem)} src={elem.photoURL} alt="page" />
