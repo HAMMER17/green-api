@@ -6,9 +6,11 @@ import '../style/mypage.css'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { getUserData } from '../redux/user';
+import { RotatingLines } from 'react-loader-spinner'
 
 const MyPage = () => {
   const [userData, setUserData] = useState([])
+  const [loader, setLoader] = useState(true)
   const { currentUser } = useContext(AuthContext)
   // const state = useSelector(state => state.user.value)
 
@@ -29,11 +31,13 @@ const MyPage = () => {
           arr.push(doc.data())
       })
       setUserData(arr)
+      setLoader(false)
     }
     getUser()
   }, [currentUser.uid])
 
   const chatUser = async (data) => {
+    setLoader(true)
     const comdinedId = await currentUser.uid > data.id ? currentUser.uid + data.id : data.id + currentUser.uid
     try {
       const res = await getDoc(doc(db, "private", comdinedId))
@@ -52,13 +56,19 @@ const MyPage = () => {
   return (
     <div className='my_page'>
       <button className='my_button' onClick={comeBack}>come back</button>
-      <h1>I am {currentUser.displayName}</h1>
+      <h1>I am {currentUser.displayName} </h1>
       <img className='my_page_img' src={currentUser.photoURL} alt="currentUser" />
 
       <h3>{currentUser.email}</h3>
       <h2 >You could write to them in private chat...</h2>
       <div className="my_page_img">
-        {userData.map(elem => (
+        {loader ? (<div style={{ margin: 50 }}> <RotatingLines
+          strokeColor="red"
+          strokeWidth="5"
+          animationDuration="0.75"
+          width="96"
+          visible={true}
+        /></div>) : userData.map(elem => (
           <img key={Math.random()} onClick={() => chatUser(elem)} src={elem.photoURL} alt="page" />
         ))}
       </div>

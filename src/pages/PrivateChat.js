@@ -16,7 +16,6 @@ const PrivateChat = () => {
   const { currentUser } = useContext(AuthContext)
 
   let date = new Date();
-
   let formatter = new Intl.DateTimeFormat("en", {
     weekday: "long",
     year: "numeric",
@@ -65,7 +64,7 @@ const PrivateChat = () => {
           <div ref={scrollRef} key={Math.random()} className={el.userId === currentUser.uid ? "private_user_chat" : "private_user_chat_right"} style={{ color: 'white' }}>
             <h3>{currentUser.uid === el.userId ? currentUser.displayName : el.displayName}</h3>
             <p >{el.userText}</p>
-            {/* <span>{el.date}</span> */}
+            {/* <span>{el?.date}</span> */}
           </div>
 
         ))}

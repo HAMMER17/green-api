@@ -42,16 +42,16 @@ a {
   padding: 10px;
 }
 
-.search input {
+/* .search input {
   width: 80%;
   padding: 10px 15px;
   border-radius: 10px;
   border: none;
-}
+} */
 
 .search button {
   padding: 15px;
-  border: none;
+  border: 2px solid white;
   border-radius: 10px;
   margin: 1px;
   cursor: pointer;
@@ -76,4 +76,5 @@ a {
   margin-right: 10px;
   object-fit: contain;
   cursor: pointer;
+  border: 2px solid white;
 }
